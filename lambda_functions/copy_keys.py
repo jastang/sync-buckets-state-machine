@@ -109,7 +109,8 @@ class KeySynchronizer(Thread):
             Bucket=self.destination,
             Key=key,
             MetadataDirective='COPY',
-            TaggingDirective='COPY'
+            TaggingDirective='COPY',
+            ServerSideEncrpytion='aws:kms'
         )
 
     def run(self):
